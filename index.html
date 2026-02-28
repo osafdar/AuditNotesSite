@@ -44,8 +44,8 @@
                 <a href="#features" class="hover:text-blue-600 transition-colors">Features</a>
                 <a href="#security" class="hover:text-blue-600 transition-colors">Security</a>
                 <a href="#pricing" class="hover:text-blue-600 transition-colors">Pricing</a>
-                <a href="#docs" class="hover:text-blue-600 transition-colors">Docs</a>
-                    <a href="privacypolicy.html" class="hover:text-blue-600 transition-colors">Privacy & Terms</a>
+                <a href="docs.html" class="hover:text-blue-600 transition-colors">Docs</a>
+                <a href="privacypolicy.html" class="hover:text-blue-600 transition-colors">Privacy & Terms</a>
             </div>
 
             <div class="flex items-center gap-4">
@@ -259,72 +259,33 @@
     <!-- Pricing Section -->
     <section id="pricing" class="py-32 bg-white border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-6 text-slate-900">Enterprise Pricing</h2>
-            <p class="text-slate-500 mb-16 text-lg">Transparent pricing. Every plan starts with a <strong>90-day free trial</strong>.</p>
-            
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- Free Plan -->
-                <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200 flex flex-col hover:shadow-lg transition-shadow">
-                    <h3 class="font-bold text-slate-400 uppercase tracking-widest text-sm mb-4">Personal</h3>
-                    <div class="text-5xl font-black mb-6 text-slate-900">$0</div>
-                    <ul class="text-left space-y-4 mb-10 text-slate-600 flex-1">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> Local Data Only</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> Standard Workpapers</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> Basic Export</li>
-                    </ul>
-                    <button class="w-full py-4 rounded-xl border-2 border-slate-200 font-bold hover:bg-white hover:border-blue-500 hover:text-blue-600 transition-colors">Get Started</button>
+            <h2 class="text-4xl font-bold mb-6 text-slate-900">Simple Pricing</h2>
+            <p class="text-slate-500 mb-16 text-lg">Choose your plan. Every plan comes with a <strong>30-day free trial</strong>.</p>
+            <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <!-- Monthly Plan -->
+                <div class="bg-slate-900 p-10 rounded-3xl border-4 border-blue-600 shadow-2xl flex flex-col text-white">
+                    <h3 class="font-bold text-blue-400 uppercase tracking-widest text-sm mb-4">Monthly</h3>
+                    <div class="text-5xl font-black mb-2">$9.99<span class="text-lg text-slate-400 font-medium">/mo</span></div>
+                    <p class="text-blue-400 font-bold text-sm mb-8">30-day free trial included</p>
+                    <!-- No feature list, just button -->
                 </div>
-
-                <!-- Pro Plan -->
-                <div class="bg-slate-900 p-10 rounded-3xl border-4 border-blue-600 shadow-2xl scale-105 relative flex flex-col text-white">
-                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-6 py-1 rounded-full text-xs font-black uppercase tracking-wider">Most Popular</div>
-                    <h3 class="font-bold text-blue-400 uppercase tracking-widest text-sm mb-4">Professional</h3>
-                    <div class="text-5xl font-black mb-2">$19<span class="text-lg text-slate-400 font-medium">/mo</span></div>
-                    <p class="text-blue-400 font-bold text-sm mb-8">INCLUDES 3 MONTHS FREE</p>
-                    <ul class="text-left space-y-4 mb-10 text-slate-300 flex-1">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> <strong>Unlimited Projects</strong></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> Encrypted Cloud Sync</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> Advanced PDF/Excel Exports</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> Priority Support</li>
-                    </ul>
-                    <button class="w-full py-4 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-500 transition-colors shadow-lg shadow-blue-900/50">Start Free Trial</button>
+                <!-- Annual Plan (Famous) -->
+                <div class="bg-slate-50 p-10 rounded-3xl border-4 border-purple-600 shadow-2xl scale-105 relative flex flex-col">
+                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-purple-600 text-white px-6 py-1 rounded-full text-xs font-black uppercase tracking-wider">Famous</div>
+                    <h3 class="font-bold text-purple-600 uppercase tracking-widest text-sm mb-4">Annual</h3>
+                    <div class="text-5xl font-black mb-2 text-slate-900">$89<span class="text-lg text-slate-400 font-medium">/yr</span></div>
+                    <p class="text-purple-600 font-bold text-sm mb-8">30-day free trial included</p>
+                    <!-- No feature list, just button -->
+                    </div>
+                    
                 </div>
-
-                <!-- Annual Plan -->
-                <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200 flex flex-col hover:shadow-lg transition-shadow">
-                    <h3 class="font-bold text-slate-400 uppercase tracking-widest text-sm mb-4">Annual</h3>
-                    <div class="text-5xl font-black mb-6 text-slate-900">$190<span class="text-lg text-slate-400 font-medium">/yr</span></div>
-                    <p class="text-green-600 font-bold text-sm mb-8">SAVE 17%</p>
-                    <ul class="text-left space-y-4 mb-10 text-slate-600 flex-1">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> Everything in Pro</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> Priority feature requests</li>
-                    </ul>
-                    <button class="w-full py-4 rounded-xl border-2 border-slate-300 font-bold hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-colors">Select Annual</button>
-                </div>
+                <div class="w-full flex justify-center mt-8">
+                        <button class="w-full max-w-2xl py-6 rounded-2xl bg-purple-500 text-white font-bold text-lg hover:bg-purple-600 transition-colors shadow-lg shadow-purple-900/30" style="letter-spacing:0.02em;">Start 30–Day Free Trial</button>
+                    </div>
             </div>
         </div>
     </section>
 
-    <!-- Docs / Transparency -->
-    <section id="docs" class="py-24 px-6 bg-slate-50">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-10 flex items-center gap-4 text-slate-900">
-                <div class="bg-blue-100 p-3 rounded-lg text-blue-600"><i class="fa-solid fa-book"></i></div>
-                Transparency & Privacy
-            </h2>
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 space-y-6 text-slate-600 leading-relaxed">
-                <div>
-                    <h4 class="font-bold text-slate-900 mb-2 text-lg">GDPR & Compliance Commitment</h4>
-                    <p>AuditNote is designed to facilitate "Reperformance" standards. We do not analyze your data for advertising. Your audit notes are your intellectual property, stored in a private container.</p>
-                </div>
-                <hr class="border-slate-100">
-                <div>
-                    <h4 class="font-bold text-slate-900 mb-2 text-lg">Application Security Assurance</h4>
-                    <p>By hosting on the Microsoft App Store, we guarantee that our app satisfies rigorous security requirements. We provide a full audit trail not just for your notes, but for our app updates themselves.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="py-12 bg-white text-center border-t border-slate-200">
