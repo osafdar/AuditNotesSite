@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy AuditNotes Product</title>
-    <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
     <script>
         // Set the environment to sandbox before setup
         Paddle.Environment.set('sandbox');
 
-        // Replace with your Paddle Vendor ID
-        Paddle.Setup({
-            vendor: 51095
+        // Replace with your Paddle Client Token
+        Paddle.Initialize({
+            token: 'test_cb8f30e148f639113884b0805a0' // e.g., 'test_xxxxxxxxxxxxxxxxxxx'
         });
 
         // Helper to get query params as object
@@ -28,10 +28,15 @@
 
         function openCheckout() {
             const params = getQueryParams();
-            // You can add more custom passthrough data here if needed
+            // You can add more custom customData here if needed
             Paddle.Checkout.open({
-                product: "pro_01kk79p5mpb7psncfmt2r0jj30",
-                passthrough: JSON.stringify(params)
+                items: [
+                    {
+                        priceId: 'pri_01kk79s13ket4hae192qxtzkd2', // Starts with 'pri_'
+                        quantity: 1
+                    }
+                ],
+                customData: params
             });
         }
     </script>
