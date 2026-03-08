@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy AuditNotes Product</title>
+    <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+    <script>
+        // Replace with your Paddle Vendor ID
+        Paddle.Setup({
+            vendor: 51095
+        });
+
+        // Helper to get query params as object
+        function getQueryParams() {
+            const params = {};
+            const search = window.location.search.substring(1);
+            if (!search) return params;
+            search.split('&').forEach(function(part) {
+                const [key, value] = part.split('=');
+                params[decodeURIComponent(key)] = decodeURIComponent(value || '');
+            });
+            return params;
+        }
+
+        function openCheckout() {
+            const params = getQueryParams();
+            // You can add more custom passthrough data here if needed
+            Paddle.Checkout.open({
+                product: "pro_01kk79p5mpb7psncfmt2r0jj30",
+                passthrough: JSON.stringify(params)
+            });
+        }
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; }
+        button { font-size: 1.2em; padding: 15px 40px; background: #1a82e2; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #155fa0; }
+    </style>
+</head>
+<body>
+    <h1>Buy AuditNotes Product</h1>
+    <p>Click the button below to purchase:</p>
+    <button onclick="openCheckout()">Buy Now</button>
+    <p style="margin-top:40px;font-size:0.9em;color:#888;">Powered by Paddle</p>
+</body>
+</html>
