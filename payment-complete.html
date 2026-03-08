@@ -5,19 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Complete</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; }
-        .success { color: #27ae60; font-size: 2em; margin-bottom: 20px; }
-        .info { color: #555; font-size: 1.1em; }
-        button { margin-top: 40px; font-size: 1em; padding: 10px 30px; background: #1a82e2; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
-        button:hover { background: #155fa0; }
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin: 0; 
+            padding: 0;
+            background-image: url('images/hero.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+
+        .content-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+            max-width: 500px;
+        }
+
+        .success { color: #2ecc71; font-size: 2em; margin-bottom: 20px; font-weight: bold; }
+        .info { color: #e0e0e0; font-size: 1.1em; line-height: 1.5; }
+        .warning { color: #ffca28; font-weight: bold; } /* Brighter orange/yellow for dark background */
+
+        button { font-size: 1.2em; padding: 15px 40px; background: #291c75; color: #fff; border: none; border-radius: 5px; cursor: pointer; margin-top: 25px; }
+        button:hover { background: #011221; }
     </style>
 </head>
 <body>
-    <div class="success">Thank you for your purchase!</div>
-    <div class="info">Your payment was successful.<br>
-    You may now close this page.<br><br>
-    <span style="color:#b77c00;">Please allow up to 8 hours for payment changes to reflect on your account.</span>
+    <div class="content-box">
+        <div class="success">Thank you for your purchase!</div>
+        <div class="info">Your payment was successful.<br>
+        You may now close this page.<br><br>
+        <span class="warning">Please allow up to 8 hours for payment changes to reflect on your account.</span>
+        </div>
+        <button onclick="window.close()">Close Page</button>
     </div>
-    <button onclick="window.close()">Close Page</button>
 </body>
 </html>
