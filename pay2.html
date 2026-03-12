@@ -36,9 +36,15 @@
 
         function openCheckout() {
             const params = getQueryParams();
+            
+            // Build the customer object if email is supplied.
+            // This pre-fills and locks the email field in the checkout.
+            const customerObj = params.email ? { email: params.email } : undefined;
+
             Paddle.Checkout.open({
                 settings: {
-                    displayMode: 'overlay'
+                    displayMode: 'overlay',
+                    allowLogout: false // Prevents the user from changing the pre-filled email
                 },
                 items: [
                     {
@@ -46,6 +52,7 @@
                         quantity: 1
                     }
                 ],
+                customer: customerObj,
                 customData: params
             });
         }
