@@ -49,6 +49,21 @@
                 customData: params
             });
         }
+
+        window.onload = function() {
+            const params = getQueryParams();
+            const btn = document.getElementById('subscribe-btn');
+            
+            // Check if UID (or UserID) and email are provided in the URL query string
+            if ((!params.UID && !params.UserID) || !params.email) {
+                console.warn('Missing parameters: UID and/or email are required.');
+                if (btn) {
+                    btn.disabled = true;
+                    btn.style.backgroundColor = '#666';
+                    btn.style.cursor = 'not-allowed';
+                }
+            }
+        };
     </script>
     <style>
         body { 
@@ -86,7 +101,7 @@
 <body>
     <div class="content-box">
         <p><b>truAudits for Auditors</b> - Annual Subscription Plan</p>
-        <button onclick="openCheckout()">Subscribe (Popup Checkout)</button>
+        <button id="subscribe-btn" onclick="openCheckout()">Subscribe (Popup Checkout)</button>
         <p style="margin-top:20px; font-size:0.9em;"><a href="mailto:success@trurigel.com" style="color: #cfcfcf; text-decoration: none;">Contact Support</a></p>
     </div>
 </body>
