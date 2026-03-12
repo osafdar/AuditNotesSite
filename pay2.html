@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy AuditNotes Product</title>
+    <title>Buy AuditNotes Product - Overlay Checkout</title>
     <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
     <script>
         // --- PADDLE CONFIGURATION ---
@@ -12,22 +12,17 @@
         const SUCCESS_REDIRECT_URL = 'payment-complete.html';
         // ----------------------------
 
-        // Set the environment to sandbox before setup ONLY if testing
-        // Paddle defaults to production.
-        // Paddle.Environment.set('sandbox');
-
-        // Initialize Paddle with your Client Token
+        // Paddle defaults to production. Use Paddle.Environment.set('sandbox') ONLY for testing.
+        
         Paddle.Initialize({
             token: PADDLE_CLIENT_TOKEN,
             eventCallback: function(data) {
-                // If a checkout completes successfully, execute the redirect
                 if (data.name == "checkout.completed") {
                     window.location.href = SUCCESS_REDIRECT_URL;
                 }
             }
         });
 
-        // Helper to get query params as object
         function getQueryParams() {
             const params = {};
             const search = window.location.search.substring(1);
@@ -41,8 +36,10 @@
 
         function openCheckout() {
             const params = getQueryParams();
-            // You can add more custom customData here if needed
             Paddle.Checkout.open({
+                settings: {
+                    displayMode: 'overlay'
+                },
                 items: [
                     {
                         priceId: PADDLE_PRICE_ID,
@@ -69,11 +66,11 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: #ffffff; /* Make text white to contrast with most background images */
+            color: #ffffff;
         }
         
         .content-box {
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background for text readability */
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0,0,0,0.5);
@@ -89,10 +86,8 @@
 <body>
     <div class="content-box">
         <p><b>truAudits for Auditors</b> - Annual Subscription Plan</p>
-        <!--<p>Click the button below to purchase:</p>-->
-        <button onclick="openCheckout()">Subscribe</button>
+        <button onclick="openCheckout()">Subscribe (Popup Checkout)</button>
         <p style="margin-top:20px; font-size:0.9em;"><a href="mailto:success@trurigel.com" style="color: #cfcfcf; text-decoration: none;">Contact Support</a></p>
-        <!--<p style="margin-top:30px;font-size:0.9em;color:#cfcfcf;">Powered by Paddle</p>-->
     </div>
 </body>
 </html>
