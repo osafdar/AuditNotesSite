@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>truAudits by truRigel Team | Secure Note-Taking for Auditors</title>
+    <title>truAudits by truRigel Team | Centralizing audit assessments and reporting for Auditors</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -31,28 +31,26 @@
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="#" class="group flex items-center gap-3">
-                <img src="images/submissionapp300by300.png" alt="truAudits Logo" class="w-10 h-10 rounded-xl shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform">
-                                <span class="text-xl font-bold text-blue-900 tracking-tight flex flex-col leading-tight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex justify-between items-center">
+            <a href="#" class="group flex items-center gap-2 sm:gap-3">
+                <img src="images/submissionapp300by300.png" alt="truAudits Logo" class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform">
+                                <span class="text-base sm:text-xl font-bold text-blue-900 tracking-tight flex flex-col leading-tight hidden xs:flex sm:flex">
                                       <span><span>tru</span><span class="text-purple-700">Audits</span></span>
-                                    <span class="text-xs text-blue-800">by truRigel Team</span>
+                                    <span class="text-[10px] sm:text-xs text-blue-800">by truRigel Team</span>
                                 </span>
             </a>
             
             <div class="hidden md:flex items-center space-x-10 text-sm font-semibold text-slate-600">
                 <a href="#features" class="hover:text-blue-600 transition-colors">Features</a>
                 <a href="#security" class="hover:text-blue-600 transition-colors">Security</a>
-                <a href="#pricing" class="hover:text-blue-600 transition-colors">Pricing</a>
-                <a href="docs.html" class="hover:text-blue-600 transition-colors">Docs</a>
                 <a href="privacypolicy.html" class="hover:text-blue-600 transition-colors">Privacy & Terms</a>
             </div>
 
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2 sm:gap-4">
                 <span class="hidden lg:flex items-center gap-2 text-[10px] font-bold text-slate-400 border border-slate-200 px-3 py-1 rounded-full uppercase tracking-wider bg-slate-50">
                     <i class="fab fa-microsoft text-blue-500"></i> Store Verified
                 </span>
-                <a href="#pricing" class="bg-slate-900 text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-blue-600 transition-colors shadow-lg shadow-slate-900/20">Get Started</a>
+                <a href="https://apps.microsoft.com/detail/9N0RTMJ4WM3K" target="_blank" rel="noopener noreferrer" class="bg-slate-900 text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-bold hover:bg-blue-600 transition-colors shadow-lg shadow-slate-900/20 whitespace-nowrap">Get Started</a>
             </div>
         </div>
     </nav>
@@ -60,11 +58,11 @@
     <!-- Hero Section -->
     <section id="home" class="relative min-h-screen w-full overflow-hidden" style="background: url('images/hero.png') center center / cover no-repeat;">
         <!-- ...existing code... -->
-        <div class="absolute bottom-8 left-0 w-full flex flex-col items-center justify-center z-20 text-center">
-            <span class="text-base sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white drop-shadow-lg bg-black/60 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-2xl uppercase tracking-wide whitespace-nowrap inline-block">Auditor-designed. Peer-perfected. Budget-friendly.</span>
-                <span class="mt-4 text-lg md:text-xl text-blue-900 px-6 py-2 tracking-wide bg-white rounded-xl inline-block shadow">
-                 Streamline your audit lifecycle—from knowledge gathering and coordination to findings and reporting.
-                 <br>All in one secure offline platform.
+        <div class="absolute bottom-8 left-0 w-full flex flex-col items-center justify-center z-20 text-center px-4">
+            <span class="text-xs sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-white drop-shadow-lg bg-black/60 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-2xl uppercase tracking-wide whitespace-normal text-center inline-block max-w-[95%] leading-snug">Auditor-designed. Peer-perfected. Secure. Affordable</span>
+                <span class="mt-4 text-sm sm:text-lg md:text-xl text-blue-900 px-4 sm:px-6 py-2 tracking-wide bg-white rounded-xl inline-block shadow max-w-[95%] sm:max-w-none">
+                 Streamline your audit lifecycle—from knowledge and inquiries management to findings and reporting.
+                 <br class="hidden sm:block">All in one secure Microsoft certified platform.
             </span>
         </div>
         <div class="hero-pattern absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
@@ -111,7 +109,7 @@
                             <i class="fa-solid fa-cloud-arrow-up text-blue-500 text-2xl group-hover:scale-110 transition-transform"></i>
                             <h3 class="text-xl font-bold">Secure Updates</h3>
                         </div>
-                        <p class="text-slate-400 leading-relaxed">Patches are delivered automatically through the secure Windows Update channel. No risky EXE downloads.</p>
+                        <p class="text-slate-400 leading-relaxed">Updates are delivered through the secure Microsoft Store. No risky EXE downloads.</p>
                     </div>
                 </div>
             </div>
@@ -120,39 +118,11 @@
 
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-32 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-6 text-slate-900">Simple Pricing</h2>
-            <p class="text-slate-500 mb-16 text-lg">Choose your plan. Every plan comes with a <strong>30-day free trial</strong>.</p>
-            <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                <!-- Monthly Plan -->
-                <div class="bg-slate-900 p-10 rounded-3xl border-4 border-blue-600 shadow-2xl flex flex-col text-white">
-                    <h3 class="font-bold text-blue-400 uppercase tracking-widest text-sm mb-4">Monthly</h3>
-                    <div class="text-5xl font-black mb-2">$9.99<span class="text-lg text-slate-400 font-medium">/mo</span></div>
-                    <p class="text-blue-400 font-bold text-sm mb-8">30-day free trial included</p>
-                    <!-- No feature list, just button -->
-                </div>
-                <!-- Annual Plan (Famous) -->
-                <div class="bg-slate-50 p-10 rounded-3xl border-4 border-purple-600 shadow-2xl scale-105 relative flex flex-col">
-                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-purple-600 text-white px-6 py-1 rounded-full text-xs font-black uppercase tracking-wider">Famous</div>
-                    <h3 class="font-bold text-purple-600 uppercase tracking-widest text-sm mb-4">Annual</h3>
-                    <div class="text-5xl font-black mb-2 text-slate-900">$89<span class="text-lg text-slate-400 font-medium">/yr</span></div>
-                    <p class="text-purple-600 font-bold text-sm mb-8">30-day free trial included</p>
-                    <!-- No feature list, just button -->
-                    </div>
-                    
-                </div>
-                <div class="w-full flex justify-center mt-8">
-                        <button class="w-full max-w-2xl py-6 rounded-2xl bg-purple-500 text-white font-bold text-lg hover:bg-purple-600 transition-colors shadow-lg shadow-purple-900/30" style="letter-spacing:0.02em;">Start 30–Day Free Trial</button>
-                    </div>
-            </div>
-        </div>
-    </section>
-
+    
 
     <!-- Footer -->
     <footer class="py-12 bg-white text-center border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center">
+        <!--<div class="max-w-7xl mx-auto px-6 flex flex-col items-center">
              <div class="text-2xl font-bold text-slate-900 flex items-center gap-2 mb-6 opacity-50 grayscale hover:grayscale-0 transition-all">
                 <i class="fa-solid fa-file-shield"></i> Audit<span class="text-blue-600">Note</span>
             </div>
@@ -162,7 +132,7 @@
                 <a href="#" class="hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
                 <a href="#" class="hover:text-blue-600 transition"><i class="fab fa-github"></i></a>
                     <a href="pivacypolicy.html" class="hover:text-blue-600 transition">Privacy & Terms</a>
-            </div>
+            </div>-->
             <div class="text-slate-400 text-xs font-bold uppercase tracking-widest">
                  &copy; 2026 truAudits by truRigel Team | Secured via Microsoft Store
             </div>
