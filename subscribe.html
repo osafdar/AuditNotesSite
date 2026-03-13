@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy AuditNotes Product - Subscribe</title>
+    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+    <script>
+        // --- PADDLE CONFIGURATION ---
+        const PADDLE_CLIENT_TOKEN = 'live_47385f4474288fce66292c62abc';
+        const PADDLE_PRICE_ID = 'pri_01kjvp2yv3epb2eg1p2a06radk';
+        const SUCCESS_REDIRECT_URL = 'payment-complete.html';
+        // ----------------------------
+        
+        Paddle.Initialize({
+            token: PADDLE_CLIENT_TOKEN,
+            eventCallback: function(data) {
+                if (data.name == "checkout.completed") {
+                    window.location.href = SUCCESS_REDIRECT_URL;
+                }
+            }
+        });
+
+        function openCheckout() {
+            const emailInput = document.getElementById('login-email').value.trim();
+            
+            // Build the customer object if email is supplied.
+            // This pre-fills the email field in the checkout.
+            const customerObj = emailInput ? { email: emailInput } : undefined;
+
+            Paddle.Checkout.open({
+                settings: {
+                    displayMode: 'overlay',
+                    allowLogout: true // Allows the user to edit the pre-filled email
+                },
+                items: [
+                    {
+                        priceId: PADDLE_PRICE_ID,
+                        quantity: 1
+                    }
+                ],
+                customer: customerObj
+            });
+        }
+
+        function validateForm() {
+            const emailValue = document.getElementById('login-email').value.trim();
+            const isTermsAccepted = document.getElementById('terms-checkbox').checked;
+            const btn = document.getElementById('subscribe-btn');
+            
+            // Basic email validation regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (emailRegex.test(emailValue) && isTermsAccepted) {
+                btn.disabled = false;
+                btn.style.backgroundColor = '#291c75';
+                btn.style.cursor = 'pointer';
+            } else {
+                btn.disabled = true;
+                btn.style.backgroundColor = '#666';
+                btn.style.cursor = 'not-allowed';
+            }
+        }
+    </script>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin: 0; 
+            padding: 0;
+            background-image: url('images/hero.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+        
+        .content-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+            max-width: 500px;
+        }
+
+        h1 { margin-top: 0; }
+
+        .input-group {
+            margin: 25px 0;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 0.9em;
+            color: #ffffff;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            text-align: center; /* Center the label text */
+            font-weight: 500;
+        }
+
+        .input-group input {
+            width: 100%;
+            max-width: 320px;
+            display: block;
+            margin: 0 auto;
+            padding: 12px;
+            font-size: 1em;
+            text-align: center; /* Center the typed email inside the input box */
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .checkbox-group {
+            margin: 15px 0 25px 0;
+            font-size: 0.9em;
+            color: #cfcfcf;
+        }
+
+        .checkbox-group label {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            line-height: 1.4;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 8px;
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+        }
+
+        .checkbox-group a {
+            color: #64b5f6; /* Soft blue for links instead of yellow */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .checkbox-group a:hover {
+            text-decoration: underline;
+        }
+
+        button { 
+            font-size: 1.2em; 
+            padding: 15px 40px; 
+            background: #666; /* Disabled state by default */
+            color: #fff; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: not-allowed; 
+            margin-top: 10px; 
+            width: auto;
+            min-width: 200px;
+            transition: background 0.3s;
+        }
+        
+        button:not([disabled]):hover { 
+            background: #011221; 
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box">
+
+        <p style="margin-top: 0;">Annual Subscription Plan (truAudits)</p>
+        
+        <div class="input-group">
+            <label for="login-email">Please use your truAudits login email here. This ensures your new subscription connects to your app license right away without any extra steps.</label>
+            <input type="email" id="login-email" maxlength="40" placeholder="Enter your login email" oninput="validateForm()">
+        </div>
+
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" id="terms-checkbox" onchange="validateForm()">
+                <span>I agree to the <a href="https://trurigel.com/privacypolicy.html" target="_blank" rel="noopener noreferrer">Privacy Policy and Terms of Service</a>.</span>
+            </label>
+        </div>
+
+        <button id="subscribe-btn" onclick="openCheckout()" disabled>Subscribe</button>
+        
+        <p style="margin-top:20px; font-size:0.9em;">
+            <a href="mailto:success@trurigel.com" style="color: #cfcfcf; text-decoration: none;">Contact Support</a>
+        </p>
+    </div>
+</body>
+</html>
