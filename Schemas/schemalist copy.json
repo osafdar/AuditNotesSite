@@ -1,3 +1,18 @@
 [
-  
+  {
+    "SchemaName": "ISO27001_2022",
+    "Description": "ISO/IEC 27001:2022 Information Security Management System"
+  },
+  {
+    "SchemaName": "ISO27002_2022",
+    "Description": "Information security, cybersecurity and privacy protection — Information security controls"
+  },
+  {
+    "SchemaName": "ISO9001_2026",
+    "Description": "ISO 9001:2026 - Quality Management System"
+  },
+  {
+    "SchemaName": "ISO9001_2015",
+    "Description": "ISO 9001:2015 - Quality Management System"
+  }
 ]
