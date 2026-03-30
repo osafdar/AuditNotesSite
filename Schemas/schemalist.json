@@ -1,1 +1,6 @@
-[]
+[
+    {
+    "SchemaName": "Template Schema" ,
+    "Description": "Use this template to build custom schemas. Please remember that Item Number column is mandatory in each excel workbook sheet.You can multiple columns after item number column in each sheet"
+  }
+]
