@@ -35,8 +35,22 @@ Follow these simple steps to build a custom schema for your audits:
    * Next, type `Controls` into the **Item Category** field and press **Enter** to add your second category.
    * Once you have added all necessary categories, click **Save**.
 
-**Important: Your custom schema template is automatically saved as an Excel file in the designated path:** 
+> **Important: Your custom schema template is automatically saved as an Excel file in the designated path:** 
 `{UserSelectedDocumentRepository}/SchemaTemplates/Custom`
+
+---
+
+### How to Show or Hide Schemas
+
+Sometimes you may want to clean up your workspace by hiding schemas you aren't currently using. You can easily manage which schemas appear in your active lists:
+
+1. **Open Schema Management:** From the main menu, click on **Schemas** and select **Manage**.
+2. **View Available Schemas:** In the window that opens, ensure you are on the **Available Schemas** tab.
+3. **Toggle Visibility:** Locate the schema you want to hide (or show) in the list. Check or uncheck the box in the **Visible** column. Unchecking it will hide it from your dropdowns without deleting any data.
+
+   <div align="left">
+      <img src="images/SchemaShowHide.png" alt="Manage Schemas" style="border: 1px solid black;" />
+   </div>
 
 ---
 
