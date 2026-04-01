@@ -1,0 +1,51 @@
+<h2>What are Schemas?</h2>
+
+<p>In truAudits, <strong>Schemas</strong> act as the structural blueprint for your audits. They are essential for organizing and categorizing various audit items into a logical hierarchy.</p>
+
+<p>Think of a schema as a structured table of contents for an audit. It breaks down the overarching audit standard into manageable <strong>Item Categories</strong>, which then contain specific <strong>Audit Items</strong> (the core topics or requirements to be evaluated).</p>
+
+<h3>Example: ISO 27001:2022</h3>
+
+<p>To illustrate, let's look at the <strong>ISO 27001:2022</strong> standard:</p>
+
+<ul style="line-height: 1.7;">
+    <li><strong>Item Categories:</strong> The standard is broadly divided into specific categories such as <strong>Clauses</strong> and <strong>Controls</strong>.</li>
+    <li><strong>Audit Items:</strong> Within the <strong>Clauses</strong> category, you will find individual audit items. For instance, Clause number 1, titled <strong>"Scope"</strong>, represents a single audit item that needs to be assessed.</li>
+</ul>
+
+<p>By utilizing schemas, truAudits ensures that your audit process remains structured, comprehensive, and easy to navigate.</p>
+
+<div style="background-color: #f4f6f8; border-left: 4px solid #0d6efd; padding: 20px; margin-top: 30px; border-radius: 4px;">
+    <h3 style="margin-top: 0; color: #212529; font-size: 1.25em;">How to Create a New Schema</h3>
+    <p style="margin-top: 0;">Follow these simple steps to build a custom schema for your audits:</p>
+    <ol style="margin-bottom: 0; padding-left: 20px; color: #495057; line-height: 1.7;">
+        <li style="margin-bottom: 20px;">
+            From the main menu, click on <strong>Schemas</strong> and then select <strong>Manage</strong>. This will open the Schema Management popup window.
+            <div style="margin-top: 15px; text-align: left;">
+                <img src="images/BuildNewSchema.png" alt="Build New Schema" style="max-width: 100%; border: 1px solid black; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            </div>
+        </li>
+        <li style="margin-bottom: 20px;">
+            <strong>Define the Schema Name and First Category:</strong>
+            <ul style="margin-top: 5px; margin-bottom: 10px; padding-left: 20px;">
+                <li>In the <strong>Schema Name</strong> field, enter <code>ISO27001_2022</code>.</li>
+                <li>In the <strong>Item Category</strong> field, enter <code>Clauses</code> and press <strong>Enter</strong>.</li>
+            </ul>
+            <div style="background-color: #e9ecef; border-left: 4px solid #ffc107; padding: 10px 15px; margin-bottom: 10px; border-radius: 4px;">
+                <strong>Note:</strong> You will notice the system automatically entered the <strong>Item Number</strong> and <strong>Title of Item</strong> columns below. The <strong>Item Number</strong> column is mandatory in each Item Category and is used to track all activities against the selected item.
+            </div>
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>Add Additional Categories:</strong>
+            <ul style="margin-top: 5px; border-bottom: 10px;">
+                <li>Next, enter another Item Category <code>Controls</code> in the field and press <strong>Enter</strong>.</li>
+                <li>Once finished adding all your categories, click <strong>Save</strong>.</li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
+<p style="margin-top: 20px; padding: 15px; background-color: #e2e3e5; border-radius: 4px; color: #383d41;">
+    <strong>Important:</strong> Your new schema is automatically saved as an Excel file in the designated path:
+    <br/><code>{UserSelectedDocumentRepository}/SchemaTemplates/Custom</code>
+</p>
