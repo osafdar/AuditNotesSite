@@ -5,168 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help - truAudits</title>
     <link rel="icon" type="image/png" href="../images/submissionapp300by300.png" />
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-        }
-        .main-container {
-            display: flex;
-            flex: 1;
-            overflow: hidden;
-        }
-        #sidebar {
-            flex: 0 0 250px;
-            background-color: #5d6bc0;
-            border-right: 1px solid #4a56a0;
-            padding: 20px 0;
-            overflow-y: auto;
-        }
-        #sidebar h3 {
-            padding: 0 20px;
-            margin-top: 0;
-            color: #ffffff;
-            opacity: 0.9;
-        }
-        .nav-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .nav-link {
-            display: block;
-            padding: 12px 20px;
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: background-color 0.2s, color 0.2s;
-            border-left: 4px solid transparent;
-        }
-        .nav-link:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
-        }
-        .nav-link.active {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #ffffff;
-            border-left-color: #ffffff;
-            font-weight: 600;
-        }
-        #content {
-            flex: 1;
-            padding: 40px;
-            overflow-y: auto;
-            background-color: #ffffff;
-        }
-        .content-section {
-            display: none;
-            max-width: 800px;
-        }
-        .content-section.active {
-            display: block;
-            animation: fadeIn 0.3s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(5px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        h2 {
-            color: #212529;
-            border-bottom: 2px solid #f8f9fa;
-            padding-bottom: 15px;
-            margin-top: 0;
-        }
-        p {
-            line-height: 1.6;
-            color: #495057;
-        }
-        .footer {
-            background-color: #f8f9fa;
-            border-top: 1px solid #dee2e6;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            font-size: 12px;
-            color: #6c757d;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .footer img {
-            width: 24px;
-            height: 24px;
-            border-radius: 4px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="main-container">
-        <nav id="sidebar">
-            <h3 style="display: flex; align-items: center; gap: 10px;">
-                <img src="../images/submissionapp300by300.png" alt="truAudits Logo" style="width: 24px; height: 24px; border-radius: 4px;">
-                Help Topics
-            </h3>
-            <ul class="nav-list">
-            <li><a href="#" class="nav-link active" onclick="showContent('document-repository', this); return false;">Document Repository</a></li>
-            <!-- Add future links here -->
-        </ul>
-    </nav>
-    <main id="content">
-        <div id="document-repository" class="content-section active">
-            <h2>Document Repository</h2>
-            <p>The Document Repository is your designated local folder where all audit documents are stored, allowing the Auditor to work efficiently in offline mode.</p>
-            <p>Please note that it is the Auditor's sole responsibility to maintain backups of this folder to prevent data loss. A highly recommended practice to ensure your data is secure is to store this folder within Microsoft OneDrive (or a similar cloud-syncing service) and verify that it is actively synchronizing with your online account.</p>
-            
-            <div style="background-color: #f4f6f8; border-left: 4px solid #0d6efd; padding: 20px; margin-top: 30px; border-radius: 4px;">
-                <h3 style="margin-top: 0; color: #212529; font-size: 1.25em;">Configuration Steps</h3>
-                <p style="margin-top: 0;">To set up your Document Repository, please complete the following steps:</p>
-                <ol style="margin-bottom: 0; padding-left: 20px; color: #495057; line-height: 1.7;">
-                    <li style="margin-bottom: 10px;">Navigate to the main menu and click on <strong>Configure</strong>.</li>
-                    <li style="margin-bottom: 10px;">Select <strong>Configure Document Repository</strong> from the available options.</li>
-                    <li>
-                        Browse your file system to define the local directory where your audit documents will be saved. <em>(Tip: We highly encourage choosing a folder integrated with <strong>OneDrive</strong> to guarantee continuous synchronization and secure backups).</em>
-                        <div style="margin-top: 15px; text-align: left;">
-                            <img src="images/ConfigureRepo.png" alt="Configure Document Repository" style="max-width: 100%; border: 1px solid black; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                        </div>
-                    </li>
-                </ol>
+        <!-- Sidebar will be injected here -->
+        <div id="sidebar-placeholder" style="display: contents;"></div>
+
+        <main id="content">
+            <div class="content-section active">
+                <h2>Welcome to truAudits Help Center</h2>
+                <p>Welcome to the official documentation and support center for truAudits.</p>
+                <p>Please select a topic from the left sidebar to continue reading.</p>
+                
+                <h3 style="margin-top: 30px;">Getting Started</h3>
+                <ul>
+                    <li><a href="document-repository.html" style="color: #0d6efd; text-decoration: none;">Configure your Document Repository</a></li>
+                </ul>
             </div>
-        </div>
-        
-        <!-- Add future content sections here -->
         </main>
     </div>
 
-    <footer class="footer">
-        <img src="../images/submissionapp300by300.png" alt="truAudits Logo">
-        &copy; 2026 truAudits by truRigel Team | Secured via Microsoft Store
-    </footer>
+    <!-- Footer will be injected here -->
+    <div id="footer-placeholder" style="display: contents;"></div>
 
-    <script>
-        function showContent(sectionId, element) {
-            // Hide all content sections
-            const sections = document.querySelectorAll('.content-section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-
-            // Remove active highlight from all nav links
-            const links = document.querySelectorAll('.nav-link');
-            links.forEach(link => {
-                link.classList.remove('active');
-            });
-
-            // Show selected content section
-            document.getElementById(sectionId).classList.add('active');
-            
-            // Highlight clicked nav link
-            element.classList.add('active');
-        }
-    </script>
+    <script src="components.js"></script>
 </body>
 </html>
