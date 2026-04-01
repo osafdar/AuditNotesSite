@@ -9,26 +9,81 @@
 </head>
 <body>
     <div class="main-container">
-        <!-- Sidebar will be injected here -->
-        <div id="sidebar-placeholder" style="display: contents;"></div>
+        <nav id="sidebar">
+            <h3 style="display: flex; align-items: center; gap: 10px;">
+                <img src="../images/submissionapp300by300.png" alt="truAudits Logo" style="width: 24px; height: 24px; border-radius: 4px;">
+                Help Topics
+            </h3>
+            <ul class="nav-list">
+                <li><a href="#welcome" class="nav-link">Welcome</a></li>
+                <li><a href="#document-repository" class="nav-link">Document Repository</a></li>
+                <!-- Add new topics here pointing to '#filename' -->
+            </ul>
+        </nav>
+        
+        <div style="display: flex; flex-direction: column; flex: 1; overflow: hidden;">
+            <main id="content">
+                <!-- Content will be injected here dynamically -->
+            </main>
 
-        <main id="content">
-            <div class="content-section active">
-                <h2>Welcome to truAudits Help Center</h2>
-                <p>Welcome to the official documentation and support center for truAudits.</p>
-                <p>Please select a topic from the left sidebar to continue reading.</p>
-                
-                <h3 style="margin-top: 30px;">Getting Started</h3>
-                <ul>
-                    <li><a href="document-repository.html" style="color: #0d6efd; text-decoration: none;">Configure your Document Repository</a></li>
-                </ul>
-            </div>
-        </main>
+            <footer class="footer">
+                <img src="../images/submissionapp300by300.png" alt="truAudits Logo">
+                &copy; 2026 truAudits by truRigel Team | Secured via Microsoft Store
+            </footer>
+        </div>
     </div>
 
-    <!-- Footer will be injected here -->
-    <div id="footer-placeholder" style="display: contents;"></div>
+    <script>
+        async function loadPage() {
+            // Get hash (remove the '#' character). Default to 'welcome'.
+            let hash = window.location.hash.substring(1) || 'welcome';
 
-    <script src="components.js"></script>
+            // Extract just the part before any query parameters or additional anchors if needed
+            hash = hash.split('?')[0];
+
+            // 1. Update active class in sidebar instantly
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + hash) {
+                    link.classList.add('active');
+                }
+            });
+
+            const contentContainer = document.getElementById('content');
+
+            try {
+                // 2. Fetch the corresponding partial HTML file from the /topics/ folder
+                const response = await fetch('topics/' + hash + '.html');
+                
+                contentContainer.innerHTML = ''; // Clear current content
+                
+                // Wrap in our animation div to trigger the smooth fade-in
+                const wrapper = document.createElement('div');
+                wrapper.className = 'content-section active';
+
+                if (response.ok) {
+                    wrapper.innerHTML = await response.text();
+                } else {
+                    wrapper.innerHTML = '<h2>Content Not Found</h2><p>The requested topic could not be found.</p>';
+                }
+                
+                contentContainer.appendChild(wrapper);
+                
+            } catch (e) {
+                // If using local file:// protocol without a server, fetch() is usually blocked by CORS rules.
+                contentContainer.innerHTML = \`<div class="content-section active">
+                    <h2>Unable to Load Content</h2>
+                    <p style="color:#d9534f;"><strong>Note for Local Development:</strong> It looks like you are opening this file directly from your computer (file:// protocol).</p>
+                    <p>Modern browsers block dynamic loading of other local files for security reasons. To view this perfectly, please use a local web server (like VS Code Live Server addon).</p>
+                </div>\`;
+            }
+        }
+
+        // Listen for changes when user clicks a link
+        window.addEventListener('hashchange', loadPage);
+        
+        // Load the page on initial open
+        window.addEventListener('DOMContentLoaded', loadPage);
+    </script>
 </body>
 </html>
