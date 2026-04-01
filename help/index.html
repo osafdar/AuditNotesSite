@@ -71,11 +71,11 @@
                 
             } catch (e) {
                 // If using local file:// protocol without a server, fetch() is usually blocked by CORS rules.
-                contentContainer.innerHTML = \`<div class="content-section active">
+                contentContainer.innerHTML = `<div class="content-section active">
                     <h2>Unable to Load Content</h2>
                     <p style="color:#d9534f;"><strong>Note for Local Development:</strong> It looks like you are opening this file directly from your computer (file:// protocol).</p>
                     <p>Modern browsers block dynamic loading of other local files for security reasons. To view this perfectly, please use a local web server (like VS Code Live Server addon).</p>
-                </div>\`;
+                </div>`;
             }
         }
 
