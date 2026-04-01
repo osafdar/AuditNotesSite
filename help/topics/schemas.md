@@ -37,3 +37,17 @@ Follow these simple steps to build a custom schema for your audits:
 
 **Important: Your custom schema template is automatically saved as an Excel file in the designated path:** 
 `{UserSelectedDocumentRepository}/SchemaTemplates/Custom`
+
+---
+
+### Bulk Entry via Excel Template
+
+After creating your schema structure, you can easily load all your audit items at once by making bulk entries directly into the generated Excel file.
+
+Follow these steps to populate your schema:
+
+1. **Open the Data File:** From the main menu, navigate to the **Schemas** tab and click on **Open Data File**. This will seamlessly open the Excel template that was saved in:
+   `{UserSelectedDocumentRepository}/SchemaTemplates/Custom`
+2. **Understand the Structure:** Inside the Excel file, you will notice that each **Worksheet (Tab)** at the bottom corresponds to an **Item Category** you created (e.g., _Clauses_, _Controls_). The **Column Headers** within those worksheets match the columns you defined (e.g., _Item Number_, _Title of Item_).
+3. **Format as Text:** Before pasting or typing your data, you must ensure that **all columns are set to the "Text" data format** in Excel. This prevents Excel from accidentally reformatting your item numbers (such as converting the number "1.1" into a date).
+4. **Enter Your Data:** Fill in your audit items row by row under the matching worksheets and simply save the Excel file when finished.

@@ -49,3 +49,23 @@
     <strong>Important:</strong> Your new schema is automatically saved as an Excel file in the designated path:
     <br/><code>{UserSelectedDocumentRepository}/SchemaTemplates/Custom</code>
 </p>
+
+<div style="background-color: #f4f6f8; border-left: 4px solid #198754; padding: 20px; margin-top: 30px; border-radius: 4px;">
+    <h3 style="margin-top: 0; color: #212529; font-size: 1.25em;">Bulk Entry via Excel Template</h3>
+    <p style="margin-top: 0;">After creating your schema structure, you can easily load all your audit items at once by making bulk entries directly into the generated Excel file. Follow these steps to populate your schema:</p>
+    <ol style="margin-bottom: 0; padding-left: 20px; color: #495057; line-height: 1.7;">
+        <li style="margin-bottom: 15px;">
+            <strong>Open the Data File:</strong> From the main menu, navigate to the <strong>Schemas</strong> tab and click on <strong>Open Data File</strong>. This seamlessly opens the Excel template saved in:<br>
+            <code>{UserSelectedDocumentRepository}/SchemaTemplates/Custom</code>
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>Understand the Structure:</strong> Inside the Excel file, each <strong>Worksheet (Tab)</strong> corresponds to an <strong>Item Category</strong> you created (e.g., <em>Clauses</em>, <em>Controls</em>). The <strong>Column Headers</strong> within those worksheets match your defined fields (e.g., <em>Item Number</em>).
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>Format as Text:</strong> <strong style="color: #dc3545;">CRITICAL:</strong> Before pasting or typing your data, you must ensure that <strong>all columns are set to the "Text" data format</strong> in Excel. This prevents Excel from accidentally reformatting your item numbers (such as converting the number "1.1" into a date).
+        </li>
+        <li>
+            <strong>Enter Your Data:</strong> Fill in your audit items row by row under the matching worksheets and simply save the Excel file when finished.
+        </li>
+    </ol>
+</div>
