@@ -51,3 +51,5 @@ Follow these steps to populate your schema:
 2. **Understand the Structure:** Inside the Excel file, you will notice that each **Worksheet (Tab)** at the bottom corresponds to an **Item Category** you created (e.g., _Clauses_, _Controls_). The **Column Headers** within those worksheets match the columns you defined (e.g., _Item Number_, _Title of Item_).
 3. **Format as Text:** Before pasting or typing your data, you must ensure that **all columns are set to the "Text" data format** in Excel. This prevents Excel from accidentally reformatting your item numbers (such as converting the number "1.1" into a date).
 4. **Enter Your Data:** Fill in your audit items row by row under the matching worksheets and simply save the Excel file when finished.
+
+> **Important:** The **Item Number** column is strictly mandatory. Please ensure that this column is available and appropriately filled out in each worksheet within your Excel file.
