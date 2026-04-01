@@ -29,7 +29,7 @@ Follow these simple steps to build a custom schema for your audits:
    * In the **Schema Name** field, enter your desired name (e.g., `ISO27001_2022`).
    * In the **Item Category** field, type `Clauses` and press **Enter**.
 
-   > **Note:** The system automatically generates the **Item Number** and **Title of Item** columns below for you. The **Item Number** column is mandatory in each Item Category. It is used extensively by the system to track all activities against that selected audit item throughout your assessment.
+   > **Note:** The system automatically generates the columns **Item Number** and **Title** below for you. The **Item Number** column is mandatory in each Item Category. It is used extensively by the system to track all activities against that selected audit item throughout your assessment.
 
 3. **Add Additional Categories and Save:**
    * Next, type `Controls` into the **Item Category** field and press **Enter** to add your second category.
