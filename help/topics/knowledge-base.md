@@ -29,8 +29,8 @@ Like Schemas, all Knowledge Base information is saved in an Excel file. This all
 * Auditors can add any additional columns containing their informational content *after* the **Item Number** column.
 
 <div style="background-color: #e9ecef; border-left: 4px solid #ffc107; padding: 10px 15px; margin-top: 20px; border-radius: 4px; color: #383d41;">
-    <strong>Important: File Location :</strong>
-    <br/><code>{UserSelectedDocumentRepository}/SchemaTemplates/Custom/</code>
+    <strong>Important: The file will have the same name as the Schema File Name.</strong>
+    <br/>File Location:<code>{UserSelectedDocumentRepository}/KB/Custom/</code>
     <br/><br/>
-    The file will have the same name as the Schema File Name.
+    
 </div>
