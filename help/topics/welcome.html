@@ -2,7 +2,62 @@
 <p>Welcome to the official documentation and support center for truAudits.</p>
 <p>Please select a topic from the left sidebar to continue reading.</p>
 
+<h3 style="margin-top: 30px;">How truAudits Works</h3>
+<p>truAudits follows a simple top-down structure. Everything starts with a <strong>Schema</strong> — the standard or framework you are auditing against. Here is how the pieces fit together:</p>
+
+<div style="text-align: center; margin: 20px 0;">
+    <img src="images/entities.png" alt="truAudits Data Model" width="719" height="712" style="image-rendering: -webkit-optimize-contrast;">
+</div>
+
+<hr style="margin-top: 30px; margin-bottom: 30px;">
+
+<!-- Step 1 -->
+<div style="background-color: #f4f6f8; border-left: 4px solid #0288D1; padding: 20px; margin-top: 20px; border-radius: 4px;">
+    <h3 style="margin-top: 0; color: #212529;">Step 1 — Define Your Framework</h3>
+    <p style="color: #495057;">Start by creating a <strong>Schema</strong>. A Schema represents the standard or framework you plan to audit — for example, ISO 27001:2022 or SOC 2. Think of it as the master template that holds everything together.</p>
+    <p style="color: #495057;">Inside each Schema, you organize requirements into <strong>Item Categories</strong> (such as "Clauses" or "Controls"). Each category then contains individual <strong>Items</strong> — the specific requirements or checkpoints your auditors will assess.</p>
+    <p style="margin-bottom: 0; color: #6c757d; font-style: italic;">Schema → Item Categories → Items</p>
+</div>
+
+<!-- Step 2 -->
+<div style="background-color: #f4f6f8; border-left: 4px solid #29B6F6; padding: 20px; margin-top: 15px; border-radius: 4px;">
+    <h3 style="margin-top: 0; color: #212529;">Step 2 — Build Supporting Content <span style="font-size: 0.8em; color: #6c757d;">(No Audit Selection Needed)</span></h3>
+    <p style="color: #495057;">Before starting any audit, you can enrich your Items with two types of reference data:</p>
+    <ul style="color: #495057; margin-bottom: 0;">
+        <li><strong>Knowledge Base</strong> — Attach background materials, policy references, or consolidated documentation to any Item. This serves as a ready-made reference library for your audit team.</li>
+        <li><strong>Inquiries</strong> — Define a structured set of questions or evaluation criteria for each Item. These act as a checklist auditors can follow during assessments.</li>
+    </ul>
+    <p style="margin-bottom: 0; color: #6c757d; font-style: italic;">Both are managed in Excel format and can be set up entirely without creating an audit.</p>
+</div>
+
+<!-- Step 3 -->
+<div style="background-color: #f4f6f8; border-left: 4px solid #9C27B0; padding: 20px; margin-top: 15px; border-radius: 4px;">
+    <h3 style="margin-top: 0; color: #212529;">Step 3 — Create and Run an Audit</h3>
+    <p style="color: #495057;">When you are ready to begin an assessment, create an <strong>Audit</strong> and link it to the Items from your Schema. The Audit is the workspace where all assessment activity is captured.</p>
+    <p style="color: #495057; margin-bottom: 5px;">At the audit level, you can manage:</p>
+    <ul style="color: #495057; margin-bottom: 0;">
+        <li><strong>Audit Participants</strong> — Record who is involved (auditors, auditees, observers).</li>
+        <li><strong>Focus Areas</strong> — Define key topics or priorities the audit should concentrate on.</li>
+        <li><strong>Additional Notes (Audit Level)</strong> — Capture general observations or context that applies to the entire audit.</li>
+    </ul>
+</div>
+
+<!-- Step 4 -->
+<div style="background-color: #f4f6f8; border-left: 4px solid #4CAF50; padding: 20px; margin-top: 15px; border-radius: 4px;">
+    <h3 style="margin-top: 0; color: #212529;">Step 4 — Record Item-Level Findings</h3>
+    <p style="color: #495057;">Once an audit is active and you select a specific Item, the following become available:</p>
+    <ul style="color: #495057;">
+        <li><strong>Audit Notes (Item Level)</strong> — Document observations, evidence, and comments for each Item being assessed.</li>
+        <li><strong>Findings</strong> — Record formal outcomes or issues identified during the assessment. Findings can be linked to Focus Areas for traceability.</li>
+        <li><strong>Additional Notes (Item Level)</strong> — Add any supplementary detail beyond the primary audit notes for a given Item.</li>
+    </ul>
+    <p style="margin-bottom: 0; color: #6c757d; font-style: italic;">These require both an Audit and an Item to be selected — shown as dashed lines in the diagram above.</p>
+</div>
+
 <h3 style="margin-top: 30px;">Getting Started</h3>
 <ul>
     <li><a href="#document-repository" style="color: #0d6efd; text-decoration: none;">Configure your Document Repository</a></li>
+    <li><a href="#schemas" style="color: #0d6efd; text-decoration: none;">Set up your Schemas</a></li>
+    <li><a href="#knowledge-base" style="color: #0d6efd; text-decoration: none;">Build your Knowledge Base</a></li>
+    <li><a href="#inquiries" style="color: #0d6efd; text-decoration: none;">Define Inquiries</a></li>
 </ul>
