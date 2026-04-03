@@ -38,8 +38,12 @@ An audit is more than a single record — it contains several associated objects
 ### Audit Participants
 Record the individuals involved in the audit. This typically includes auditors, auditees, and observers. Maintaining a clear participant list ensures accountability and traceability throughout the engagement.
 
+![Audit Participants](../images/Partcipants.png)
+
 ### Focus Areas
 Define the key topics or priorities the audit should concentrate on. Focus Areas allow you to direct attention to specific risk areas, control domains, or themes that matter most for the assessment.
+
+![Focus Areas](../images/focusarea.png)
 
 ### Additional Notes (Audit Level)
 Capture general observations, context, or background information that applies to the entire audit. These notes are not tied to any specific item — they serve as a high-level reference for the audit team.
@@ -72,3 +76,11 @@ You can associate multiple schema items against a single finding, making it easy
 
 ### Additional Notes (Item Level)
 Add any supplementary detail beyond the primary audit notes for a given item. Use these for supporting context, follow-up reminders, or reference material specific to that item.
+
+---
+
+## Stats
+
+The **Stats** section provides a real-time overview of your audit completion status. Use it to track progress across all schema items and quickly identify areas that still need attention.
+
+![Audit Stats](../images/stats.png)
