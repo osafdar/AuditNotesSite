@@ -4,6 +4,14 @@
 
 **Inquiries** (also referred to as Checklists or Assessments, depending on the nature of the audit) are structured questions or checks used by auditors to design a standardized audit across multiple auditees. They ensure that all critical areas related to the selected Schema Items are comprehensively covered. During an audit, an auditor can use these inquiries to smoothly record responses directly from the auditee.
 
+## Recording Inquiry Responses
+
+For the selected Item, if inquiries have been defined, the auditor can enter responses by clicking the **Item Notes/Assessments** tab. This provides a structured view where each inquiry can be reviewed and answered directly during the audit.
+
+![Audit Notes and Assessments](../images/AuditNotes.png)
+
+> **Important:** Inquiry responses can only be recorded against items that are linked with the audit. If an item is unlinked from the audit after responses have been recorded, the auditor's responses will be permanently deleted.
+
 ## Linking with Schemas
 
 Inquiries are tightly integrated with your audit structure to maintain logical organization:

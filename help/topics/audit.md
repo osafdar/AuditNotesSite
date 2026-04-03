@@ -54,8 +54,14 @@ Capture general observations, context, or background information that applies to
 
 When you select both an **Audit** and a specific **Item** from the schema, additional objects become available. These are shown as dashed lines in the diagram above.
 
-### Audit Notes (Item Level)
+### Item Notes/Assessment
 Document observations, evidence, and comments for each schema item being assessed. This is where the core audit work is recorded during fieldwork.
+
+For the selected Item, if inquiries have been defined, the auditor can enter responses by clicking the **Item Notes/Assessments** tab. This provides a structured view where each inquiry can be reviewed and answered directly during the audit.
+
+![Audit Notes and Assessments](../images/AuditNotes.png)
+
+> **Important:** Inquiry responses can only be recorded against items that are linked with the audit. If an item is unlinked from the audit after responses have been recorded, the auditor's responses will be permanently deleted.
 
 ### Findings
 Record formal outcomes or issues identified during the assessment. Each finding can be linked to a **Focus Area**, providing clear traceability between what was found and the priority area it relates to.
