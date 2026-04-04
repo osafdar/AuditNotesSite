@@ -1,0 +1,108 @@
+1. Welcome
+=========
+
+Welcome to the truAudits Help Center — your official documentation and support resource.
+
+truAudits follows a simple, top-down structure. Everything starts with a Schema — the standard or framework you are auditing against.
+
+In Step 1, you define your framework by creating a Schema. A Schema represents the standard you plan to audit, such as ISO 27001:2022 or SOC 2. Inside each Schema, you organize requirements into Item Categories — like Clauses or Controls. Each category then contains individual Items — the specific requirements your auditors will assess.
+
+In Step 2, you build supporting content. Before starting any audit, you can enrich your Items with two types of reference data. First, a Knowledge Base, where you attach background materials, policy references, or documentation to any Item. Second, Inquiries, where you define structured questions or evaluation criteria that act as a checklist for auditors. Both are managed in Excel format and can be set up without creating an audit.
+
+In Step 3, you create and run an Audit. The Audit is the workspace where all assessment activity is captured. At the audit level, you can manage Audit Participants, Focus Areas, and Additional Notes that apply to the entire audit.
+
+In Step 4, you record Item-Level Findings. Once an audit is active and you select a specific Item, you can document Audit Notes, record formal Findings linked to Focus Areas, and add Additional Notes for supplementary detail.
+
+To get started, install truAudits, configure your Document Repository, set up your Schemas, build your Knowledge Base, define your Inquiries, and then create and run your Audits.
+
+
+2. Installation
+===============
+
+truAudits is available exclusively through the Microsoft Store, ensuring a secure and streamlined installation experience.
+
+Installing from the Microsoft Store offers several important security advantages. Every app published on the Store is reviewed and digitally signed by Microsoft, ensuring it has not been tampered with. Apps run in a sandboxed environment, reducing the risk of malware or unauthorized system changes. Updates are delivered automatically, so you always have the latest security patches and features. And you avoid the risks of downloading installers from unknown or third-party websites.
+
+Before installing, please note that truAudits requires Windows 10 version 14393.0 or higher. Make sure your operating system meets this minimum requirement.
+
+To install truAudits, follow these steps. First, open the Microsoft Store on your Windows device — you can find it by clicking the Start button and selecting Microsoft Store from the app list, or by searching for it in the Start menu. Next, click on the Search bar at the top of the Store window. Type "truAudits" and press Enter. Locate truAudits in the search results and click on it. Then click the Get or Install button to begin the download. Wait for the installation to complete — the Store will notify you once the app is ready.
+
+To launch truAudits after installation, click the Start button and look for truAudits in the app list. You can also type "truAudits" in the Start menu search bar for quick access.
+
+One important note about data storage: truAudits stores all data on your local machine within your specified Document Repository. The application creates and updates files in this directory as you work. Please make sure you have the necessary read and write permissions on your local machine so that truAudits can save your audit-related information.
+
+
+3. Document Repository
+======================
+
+The Document Repository is your designated local folder where all audit documents are stored, allowing you to work efficiently in offline mode.
+
+Please note that it is your sole responsibility to maintain backups of this folder to prevent data loss. A highly recommended practice is to store this folder within Microsoft OneDrive, or a similar cloud-syncing service, and verify that it is actively synchronizing with your online account.
+
+To set up your Document Repository, follow these steps. First, navigate to the main menu and click on Configure. Then select Configure Document Repository from the available options. Finally, browse your file system to define the local directory where your audit documents will be saved. We highly encourage choosing a folder integrated with OneDrive to guarantee continuous synchronization and secure backups.
+
+
+4. Schemas
+==========
+
+In truAudits, Schemas act as the structural blueprint for your audits. They are essential for organizing and categorizing audit items into a logical hierarchy.
+
+Think of a schema as a structured table of contents for an audit. It breaks down the overarching audit standard into manageable Item Categories, which then contain specific Audit Items — the core requirements to be evaluated.
+
+For example, with the ISO 27001:2022 standard, the Item Categories might include Clauses and Controls. Within the Clauses category, you would find individual audit items such as Clause number 1, titled "Scope."
+
+To create a new Schema, go to the main menu, click on Schemas, and select Manage. In the Schema Management window, enter a Schema Name — for example, "ISO27001_2022." Then in the Item Category field, type your first category, such as "Clauses," and press Enter. The system will automatically generate the Item Number and Title columns. The Item Number column is mandatory and is used throughout the system to track activities against each audit item. You can add additional categories — for example, "Controls" — and when you are finished, click Save.
+
+Your custom schema template is automatically saved as an Excel file in your Document Repository under the SchemaTemplates/Custom folder.
+
+If you want to show or hide schemas, go to Schemas, then Manage, select the Available Schemas tab, and use the Visible checkbox to control which schemas appear in your active lists. Hiding a schema does not delete any data.
+
+For bulk data entry, you can open the Excel template directly by navigating to the Schemas tab and clicking Open Data File. Enter your audit items into the spreadsheet, making sure the Item Number column is filled in for every row.
+
+
+5. Knowledge Base
+=================
+
+The Knowledge Base provides additional information about a selected Schema Item. It allows you to attach supplemental details directly to an audit item, creating a centralized knowledge hub.
+
+The primary goal is to eliminate the need to switch between truAudits and external resources such as audit standard PDF files. You can use the Knowledge Base to store excerpts from audit standards, lists of commonly used abbreviations, or detailed information on tools related to a schema item.
+
+All Knowledge Base information is saved in an Excel file. To perform bulk data entry, first ensure you have created a schema. Then navigate to the Knowledge Base tab on the right pane, and click Open Data File to view the Excel file. You can add or update multiple entries directly in the spreadsheet.
+
+When working with the Excel file, make sure the data format of all columns is set to Text. The Item Number column is required and acts as the link to the schema item. You can freely add any additional columns after the Item Number column. The file is saved in your Document Repository under the KB/Custom folder.
+
+
+6. Inquiries
+=============
+
+Inquiries — sometimes called Checklists or Assessments — are structured questions or checks used by auditors to design a standardized audit across multiple auditees. They ensure that all critical areas for the selected Schema Items are comprehensively covered.
+
+During an audit, you can use inquiries to record responses directly from the auditee. For the selected Item, if inquiries have been defined, the auditor can enter responses by clicking the Item Notes/Assessments tab.
+
+Please note that inquiry responses can only be recorded against items that are linked with the audit. If an item is unlinked after responses have been recorded, those responses will be permanently deleted.
+
+Inquiries are tightly integrated with your audit structure. They are housed under a specific Schema, organized under relevant Item Categories, and linked directly to specific Schema Items.
+
+You can manage inquiries using the tools on the Inquiries pane. "Add Related Item" lets you associate an inquiry with additional Schema Items, while "Remove Related Item" unlinks it without deleting the inquiry.
+
+For bulk data entry, navigate to the Inquiries tab on the right pane and click Open Data File. The Excel file is saved in your Document Repository under the Inquiries/Custom folder.
+
+
+7. Audits
+=========
+
+Now that you have set up your Schemas, Knowledge Base, and Inquiries, the foundation is in place. It is time to create an Audit — the workspace where all assessment activity is planned, recorded, and tracked.
+
+Before creating an audit, you may want to control which schemas are visible. Navigate to Menu, then Manage Schemas, select the Available Schemas tab, and use the Visible checkbox for each schema. Only schemas marked as visible will appear when creating or working with audits.
+
+To create a new audit, select the Audits tab in the main view and click the New Audit button. Provide the required details such as the audit name. Once created, the audit becomes your active workspace.
+
+An audit contains several associated objects. Audit Participants allow you to record the auditors, auditees, and observers involved. Focus Areas let you define key topics or priorities the audit should concentrate on. Additional Notes at the audit level let you capture general observations that apply to the entire audit.
+
+When you select both an Audit and a specific Item from the schema, item-level objects become available. Item Notes and Assessments let you document observations, evidence, and comments for each item. If inquiries have been defined, you can enter responses directly in the Item Notes/Assessments tab.
+
+Findings let you record formal outcomes or issues identified during the assessment. Each finding can be linked to a Focus Area for traceability. You can create findings directly from the Findings tab, or use the recommended method: select an audit, switch to the Schema tab, link an item to the audit, and double-click it to open the Findings screen. You can also associate multiple schema items with a single finding.
+
+Additional Notes at the item level let you add supplementary detail, such as follow-up reminders or supporting context specific to that item.
+
+Finally, the Stats section provides a real-time overview of your audit completion status, helping you track progress and identify areas that still need attention.
